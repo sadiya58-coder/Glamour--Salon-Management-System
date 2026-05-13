@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact – Glamour Salon</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-logo">
+    <span class="logo-glamour">Glamour</span>
+    <span class="logo-dot"></span>
+  </div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+  </ul>
+  <a href="services.html#booking" class="nav-btn">Book Now</a>
+  <button class="hamburger" id="hamburger"><i class="fas fa-bars"></i></button>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero contact-hero">
+  <div class="page-hero-content">
+    <p class="section-label"></p>
+    <h1>Contact <em>Us</em></h1>
+    <p>We'd love to hear from you. Reach out anytime.</p>
+  </div>
+</section>
+
+<!-- CONTACT MAIN -->
+<section class="section contact-section">
+  <div class="contact-grid">
+
+    <!-- LEFT: Contact Info -->
+    <div class="contact-info-panel">
+      <p class="section-label">Find Us</p>
+      <h2>Contact <em>Information</em></h2>
+      <div class="divider-ornament left-align"></div>
+      <p class="contact-intro">Whether you want to book an appointment, ask about our services, or simply say hello — we're here for you. Visit us, call us, or drop a message.</p>
+
+      <div class="contact-form" style="padding:2rem 2.5rem;">
+        <div class="contact-info-items">
+          <div class="contact-info-item">
+            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <h4>Salon Address</h4>
+              <p>42 Rose Lane, Connaught Place<br/>New Delhi – 110001, India</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+            <div>
+              <h4>Phone Numbers</h4>
+              <p>+91 98765 43210 (Main)<br/>+91 87654 32109 (Bookings)</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <h4>Email Addresses</h4>
+              <p>hello@glamoursalon.in<br/>bookings@glamoursalon.in</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-icon"><i class="fas fa-clock"></i></div>
+            <div>
+              <h4>Working Hours</h4>
+              <p>Monday – Saturday: 9:00 AM – 8:00 PM<br/>Sunday: 10:00 AM – 5:00 PM</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- RIGHT: Send Message -->
+    <div class="contact-form-panel">
+      <p class="section-label">Write to Us</p>
+      <h2>Send a <em>Message</em></h2>
+      <div class="divider-ornament left-align"></div>
+      <p class="contact-intro">Fill in the form below and our team will get back to you within 24 hours.</p>
+
+      <form class="contact-form" id="contactForm" onsubmit="submitContact(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="msgName">Your Name *</label>
+            <input type="text" id="msgName" placeholder="Full name" required />
+          </div>
+          <div class="form-group">
+            <label for="msgPhone">Phone Number *</label>
+            <input type="tel" id="msgPhone" placeholder="+91 XXXXX XXXXX" required />
+          </div>
+        </div>
+        <div class="form-group full-width">
+          <label for="msgEmail">Email Address *</label>
+          <input type="email" id="msgEmail" placeholder="your@email.com" required />
+        </div>
+        <div class="form-group full-width">
+          <label for="msgSubject">Subject</label>
+          <input type="text" id="msgSubject" placeholder="What is it about?" />
+        </div>
+        <div class="form-group full-width">
+          <label for="msgText">Your Message *</label>
+          <textarea id="msgText" rows="5" placeholder="Type your message here..." required></textarea>
+        </div>
+        <button type="submit" class="btn-primary booking-submit">
+          <i class="fas fa-paper-plane"></i> Send Message
+        </button>
+      </form>
+
+      <!-- Success message -->
+      <div class="contact-success" id="contactSuccess" style="display:none">
+        <div class="modal-icon" style="font-size:2.5rem; color:var(--gold)"><i class="fas fa-check-circle"></i></div>
+        <h3>Message Sent!</h3>
+        <p>Thank you for reaching out. We'll respond within 24 hours.</p>
+        <button class="btn-outline" onclick="resetContactForm()">Send Another</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- MAP PLACEHOLDER -->
+ <section class="map-section">
+  
+<div class="map-container">
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14008.112327976702!2d77.20498718453267!3d28.628920445097716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd37b741d057%3A0xcdee88e47393c3f1!2sConnaught%20Place%2C%20New%20Delhi%2C%20Delhi%20110001!5e0!3m2!1sen!2sin!4v1777612459662!5m2!1sen!2sin"
+        width="100%" 
+        height="100%" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy">
+    </iframe>
+</div>
+</section>
+
+<!-- FOOTER -->
+ <style>
+  .footer { padding: 1rem 1rem 0; }
+  .footer-inner { gap: 1rem; padding-bottom: 0.5rem; }
+  .footer-logo { font-size: 1.5rem; margin-bottom: 0.6rem; }
+  .footer-brand p { font-size: 0.8rem; margin-bottom: 1rem; }
+  .footer-socials a { width: 28px; height: 28px; font-size: 0.8rem; }
+  .footer-links h4, .footer-services h4, .footer-contact h4 { font-size: 0.95rem; margin-bottom: 0.8rem; }
+  .footer-links ul li, .footer-services ul li { margin-bottom: 0.4rem; }
+  .footer-links ul li a, .footer-services ul li a { font-size: 0.8rem; }
+  .footer-contact p { font-size: 0.78rem; margin-bottom: 0.3rem; }
+  .footer-bottom { padding: 0.5rem 0; font-size: 0.75rem; }
+</style>
+<footer class="footer" id="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">Glamour <span class="logo-dot"></span></div>
+      <p>Where beauty meets artistry. We craft experiences that make you feel your most radiant self.</p>
+      <div class="footer-socials">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="services.html#booking">Book Appointment</a></li>
+      </ul>
+    </div>
+    <div class="footer-services">
+      <h4>Our Services</h4>
+      <ul>
+        <li><a href="services.html?service=makeup">Makeup Artistry</a></li>
+        <li><a href="services.html?service=hairstyle">Hair Styling</a></li>
+        <li><a href="services.html?service=spa">Luxury Spa</a></li>
+        <li><a href="services.html?service=nails">Nail Art</a></li>
+        <li><a href="services.html?service=grooming">Men's Grooming</a></li>
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h4>Contact Us</h4>
+      <p><i class="fas fa-map-marker-alt"></i> 42 Rose Lane, Connaught Place, New Delhi – 110001</p>
+      <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+      <p><i class="fas fa-envelope"></i> hello@glamoursalon.in</p>
+      <p><i class="fas fa-clock"></i> Mon–Sat: 9:00 AM – 8:00 PM</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Glamour Beauty Salon. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+function submitContact(e) {
+  e.preventDefault();
+  document.getElementById('contactForm').style.display = 'none';
+  document.getElementById('contactSuccess').style.display = 'block';
+}
+function resetContactForm() {
+  document.getElementById('contactForm').reset();
+  document.getElementById('contactForm').style.display = 'block';
+  document.getElementById('contactSuccess').style.display = 'none';
+}
+</script>
+</body>
+</html>

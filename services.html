@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Services & Booking – Glamour Salon</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-logo">
+    <span class="logo-glamour">Glamour</span>
+    <span class="logo-dot"></span>
+  </div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html" class="active">Services</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="#booking" class="nav-btn">Book Now</a>
+  <button class="hamburger" id="hamburger"><i class="fas fa-bars"></i></button>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero services-hero">
+  <div class="page-hero-content">
+    <p class="section-label"></p>
+    <h1>Our <em>Services</em></h1>
+    <p>Explore our full range of luxury beauty treatments and book your appointment.</p>
+  </div>
+</section>
+
+<!-- SERVICE CARDS -->
+<section class="section" id="services-list">
+  <div class="section-header">
+    <p class="section-label">Choose Your Service</p>
+    <h2 class="section-title">What Would You Like Today?</h2>
+    <div class="divider-ornament"></div>
+  </div>
+
+  <div class="services-full-grid">
+
+    <div class="service-full-card" id="card-makeup" onclick="selectService('Makeup Artistry')">
+      <div class="sfc-img">
+        <img src="images/makeup2.jpg" alt="Makeup" />
+      </div>
+      <div class="sfc-body">
+        <div class="sfc-icon makeup-icon-bg"><i class="fas fa-paint-brush"></i></div>
+        <h3>Makeup Artistry</h3>
+        <p>Bridal, party & editorial looks crafted by certified makeup artists.</p>
+        <ul class="sfc-list">
+          <li><i class="fas fa-check"></i> Bridal Makeup — ₹4,000 onwards</li>
+          <li><i class="fas fa-check"></i> Party Makeup — ₹1,500 onwards</li>
+          <li><i class="fas fa-check"></i> Airbrush Makeup — ₹2,500 onwards</li>
+          <li><i class="fas fa-check"></i> HD Makeup — ₹2,000 onwards</li>
+        </ul>
+        <button class="btn-primary sfc-book-btn" onclick="selectService('Makeup Artistry')">Book This Service</button>
+      </div>
+    </div>
+
+    <div class="service-full-card" id="card-hairstyle" onclick="selectService('Hair Styling')">
+      <div class="sfc-img">
+         <img src="images/hair2.jpg" alt="Hair2" /> 
+        <i class="fas fa-cut"></i>
+      </div>
+      <div class="sfc-body">
+        <div class="sfc-icon hair-icon-bg"><i class="fas fa-cut"></i></div>
+        <h3>Hair Styling</h3>
+        <p>Cuts, colors, treatments & bridal styling by master hair artisans.</p>
+        <ul class="sfc-list">
+          <li><i class="fas fa-check"></i> Haircut & Blowout — ₹300 onwards</li>
+          <li><i class="fas fa-check"></i> Balayage / Ombre — ₹1,000 onwards</li>
+          <li><i class="fas fa-check"></i> Keratin Treatment — ₹3,000 onwards</li>
+          <li><i class="fas fa-check"></i> Bridal Hair Updo — ₹1,500 onwards</li>
+        </ul>
+        <button class="btn-primary sfc-book-btn" onclick="selectService('Hair Styling')">Book This Service</button>
+      </div>
+    </div>
+
+    <div class="service-full-card" id="card-spa" onclick="selectService('Luxury Spa')">
+      <div class="sfc-img">
+        <img src="images/spa2.jpg" alt="Spa2" />
+        <i class="fas fa-spa"></i>
+      </div>
+      <div class="sfc-body">
+        <div class="sfc-icon spa-icon-bg"><i class="fas fa-spa"></i></div>
+        <h3>Luxury Spa</h3>
+        <p>Rejuvenate your body and soul with our world-class spa therapies.</p>
+        <ul class="sfc-list">
+          <li><i class="fas fa-check"></i> Signature Facial — ₹5,00 onwards</li>
+          <li><i class="fas fa-check"></i> Full Body Massage — ₹1,500 onwards</li>
+          <li><i class="fas fa-check"></i> Body Wrap — ₹2,000 onwards</li>
+          <li><i class="fas fa-check"></i> Aromatherapy — ₹1,600 onwards</li>
+        </ul>
+        <button class="btn-primary sfc-book-btn" onclick="selectService('Luxury Spa')">Book This Service</button>
+      </div>
+    </div>
+
+    <div class="service-full-card" id="card-nails" onclick="selectService('Nail Art')">
+      <div class="sfc-img">
+        <img src="images/nail2.jpg" alt="Nail2" />
+        <i class="fas fa-hand-sparkles"></i>
+      </div>
+      <div class="sfc-body">
+        <div class="sfc-icon nails-icon-bg"><i class="fas fa-hand-sparkles"></i></div>
+        <h3>Nail Art</h3>
+        <p>From classic manicures to elaborate nail designs by expert technicians.</p>
+        <ul class="sfc-list">
+          <li><i class="fas fa-check"></i> Gel Manicure — ₹400 onwards</li>
+          <li><i class="fas fa-check"></i> Acrylic Extensions — ₹600 onwards</li>
+          <li><i class="fas fa-check"></i> Nail Art Designs — ₹150 per nail</li>
+          <li><i class="fas fa-check"></i> Spa Pedicure — ₹600 onwards</li>
+        </ul>
+        <button class="btn-primary sfc-book-btn" onclick="selectService('Nail Art')">Book This Service</button>
+      </div>
+    </div>
+
+    <div class="service-full-card" id="card-grooming" onclick="selectService('Men\'s Grooming')">
+      <div class="sfc-img">
+        <img src="images/men2.jpg" alt="Men2" />
+        <i class="fas fa-razor"></i>
+      </div>
+      <div class="sfc-body">
+        <div class="sfc-icon grooming-icon-bg"><i class="fas fa-razor"></i></div>
+        <h3>Men's Grooming</h3>
+        <p>Premium grooming services tailored for the discerning modern gentleman.</p>
+        <ul class="sfc-list">
+          <li><i class="fas fa-check"></i> Classic Haircut — ₹200 onwards</li>
+          <li><i class="fas fa-check"></i> Beard Sculpting — ₹150 onwards</li>
+          <li><i class="fas fa-check"></i> Hot Towel Shave — ₹300 onwards</li>
+          <li><i class="fas fa-check"></i> Scalp Treatment — ₹1,000 onwards</li>
+        </ul>
+        <button class="btn-primary sfc-book-btn" onclick="selectService('Men\'s Grooming')">Book This Service</button>
+      </div>
+    </div>
+
+    <div class="service-full-card" id="card-mens-facial" onclick="selectService('Men\'s Facial')">
+      <div class="sfc-img">
+        <img src="images/facial2.jpg" alt="Facial2" />
+        <i class="fas fa-user-tie"></i>
+      </div>
+      <div class="sfc-body">
+        <div class="sfc-icon mens-facial-icon-bg"><i class="fas fa-user-tie"></i></div>
+        <h3>Men's Facial</h3>
+        <p>Targeted skin care solutions for men's unique skin needs.</p>
+        <ul class="sfc-list">
+          <li><i class="fas fa-check"></i> Deep Cleanse Facial — ₹900 onwards</li>
+          <li><i class="fas fa-check"></i> Anti-Aging Treatment — ₹1,500 onwards</li>
+          <li><i class="fas fa-check"></i> Radiance Boost — ₹1,200 onwards</li>
+          <li><i class="fas fa-check"></i> Acne Control Facial — ₹1,000 onwards</li>
+        </ul>
+        <button class="btn-primary sfc-book-btn" onclick="selectService('Men\'s Facial')">Book This Service</button>
+      </div>
+    </div>
+
+    <!-- Kids Section Header -->
+    
+
+    <div class="service-full-card" id="card-kids-haircut" onclick="selectService('Kids Haircut')">
+      <div class="sfc-img">
+        <img src="images/kidhair2.jpg" alt="Facial2" >
+        <i class="fas fa-child"></i>
+      </div>
+      <div class="sfc-body">
+        <div class="sfc-icon" style="background:linear-gradient(135deg,#ffcc80,#ff8f00);"><i class="fas fa-child"></i></div>
+        <h3>Kids Haircut & Styling</h3>
+        <p>Fun, gentle & safe haircuts and party styles made just for little ones.</p>
+        <ul class="sfc-list">
+          <li><i class="fas fa-check"></i> Basic Haircut — ₹80 onwards</li>
+          <li><i class="fas fa-check"></i> Wash & Style — ₹150 onwards</li>
+          <li><i class="fas fa-check"></i> Party Braids & Twists — ₹250 onwards</li>
+          <li><i class="fas fa-check"></i> Birthday Special Look — ₹500 onwards</li>
+        </ul>
+        <button class="btn-primary sfc-book-btn" onclick="selectService('Kids Haircut')">Book This Service</button>
+      </div>
+    </div>
+
+    <div class="service-full-card" id="card-kids-spa" onclick="selectService('Kids Mini Spa')">
+      <div class="sfc-img">
+<img src="images/kidspa2.jpg" alt="Kid" />
+        <i class="fas fa-star"></i>
+      </div>
+      <div class="sfc-body">
+        <div class="sfc-icon" style="background:linear-gradient(135deg,#ffcc80,#ff8f00);"><i class="fas fa-child"></i></div>
+        <h3>Kids Mini Spa</h3>
+        <p>A gentle pampering experience with skin-safe products for kids.</p>
+        <ul class="sfc-list">
+          <li><i class="fas fa-check"></i> Mini Facial — ₹150 onwards</li>
+          <li><i class="fas fa-check"></i> Nail Paint (Hands) — ₹100 onwards</li>
+          <li><i class="fas fa-check"></i> Nail Paint (Hands & Feet) — ₹150 onwards</li>
+          <li><i class="fas fa-check"></i> Full Mini Spa Package — ₹500 onwards</li>
+        </ul>
+        <button class="btn-primary sfc-book-btn" onclick="selectService('Kids Mini Spa')">Book This Service</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- BOOKING FORM -->
+<section class="section booking-section" id="booking">
+  <div class="section-header">
+    <p class="section-label">Reserve Your Visit</p>
+    <h2 class="section-title">Book an Appointment</h2>
+    <div class="divider-ornament"></div>
+  </div>
+
+  <div class="booking-wrapper">
+    <div class="booking-info">
+      <h3>Why Book With Us?</h3>
+      <ul class="booking-perks">
+        <li><i class="fas fa-check-circle"></i> Instant booking confirmation via SMS & email</li>
+        <li><i class="fas fa-check-circle"></i> Flexible rescheduling up to 24 hours before</li>
+        <li><i class="fas fa-check-circle"></i> Expert consultation included with every service</li>
+        <li><i class="fas fa-check-circle"></i> Premium products used by certified artists</li>
+        <li><i class="fas fa-check-circle"></i> Private & hygienic service environment</li>
+      </ul>
+      <div class="booking-contact-quick">
+        <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+        <p><i class="fas fa-envelope"></i> hello@glamoursalon.in</p>
+        <p><i class="fas fa-clock"></i> Mon–Sat: 9:00 AM – 8:00 PM</p>
+      </div>
+    </div>
+
+    <form class="booking-form" id="bookingForm" onsubmit="submitBooking(event)">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="clientName">Full Name *</label>
+          <input type="text" id="clientName" placeholder="Your full name" required />
+        </div>
+        <div class="form-group">
+          <label for="clientPhone">Phone Number *</label>
+          <input type="tel" id="clientPhone" placeholder="+91 XXXXX XXXXX" required />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="clientEmail">Email Address *</label>
+          <input type="email" id="clientEmail" placeholder="your@email.com" required />
+        </div>
+        <div class="form-group">
+          <label for="clientGender">Gender</label>
+          <select id="clientGender">
+            <option value="">Select gender</option>
+            <option value="female">Female</option>
+            <option value="male">Male</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="serviceSelect">Select Service *</label>
+          <select id="serviceSelect" required>
+            <option value="">-- Choose a Service --</option>
+            <optgroup label="For Her">
+              <option value="Makeup Artistry">Makeup Artistry</option>
+              <option value="Hair Styling">Hair Styling</option>
+              <option value="Luxury Spa">Luxury Spa</option>
+              <option value="Nail Art">Nail Art</option>
+            </optgroup>
+            <optgroup label="For Him">
+              <option value="Men's Grooming">Men's Grooming</option>
+              <option value="Men's Facial">Men's Facial</option>
+            </optgroup>
+            <optgroup label="For Kids">
+              <option value="Kids Haircut">Kids Haircut & Styling</option>
+              <option value="Kids Mini Spa">Kids Mini Spa</option>
+            </optgroup>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="subService">Sub-Service / Preference</label>
+          <input type="text" id="subService" placeholder="e.g. Bridal Makeup, Balayage..." />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="appointmentDate">Appointment Date *</label>
+          <input type="date" id="appointmentDate" required />
+        </div>
+        <div class="form-group">
+          <label for="appointmentTime">Preferred Time *</label>
+          <select id="appointmentTime" required>
+            <option value="">-- Select Time --</option>
+            <option value="09:00 AM">09:00 AM</option>
+            <option value="10:00 AM">10:00 AM</option>
+            <option value="11:00 AM">11:00 AM</option>
+            <option value="12:00 PM">12:00 PM</option>
+            <option value="01:00 PM">01:00 PM</option>
+            <option value="02:00 PM">02:00 PM</option>
+            <option value="03:00 PM">03:00 PM</option>
+            <option value="04:00 PM">04:00 PM</option>
+            <option value="05:00 PM">05:00 PM</option>
+            <option value="06:00 PM">06:00 PM</option>
+            <option value="07:00 PM">07:00 PM</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group full-width">
+        <label for="specialRequest">Special Requests / Notes</label>
+        <textarea id="specialRequest" rows="3" placeholder="Any specific preferences, allergies, or requests..."></textarea>
+      </div>
+      <button type="submit" class="btn-primary booking-submit">
+        <i class="fas fa-calendar-check"></i> Confirm Appointment
+      </button>
+    </form>
+  </div>
+
+  <!-- Booking Success Modal -->
+  <div class="booking-modal" id="bookingModal">
+    <div class="modal-content">
+      <div class="modal-icon"><i class="fas fa-check-circle"></i></div>
+      <h3>Appointment Confirmed!</h3>
+      <div id="bookingSummary"></div>
+      <p class="modal-note">Your appointment is confirmed! We\'ll reach out to you shortly.</p>
+      <button class="btn-primary" onclick="closeModal()">Done</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+ <style>
+  .footer { padding: 1rem 1rem 0; }
+  .footer-inner { gap: 1rem; padding-bottom: 0.5rem; }
+  .footer-logo { font-size: 1.5rem; margin-bottom: 0.6rem; }
+  .footer-brand p { font-size: 0.8rem; margin-bottom: 1rem; }
+  .footer-socials a { width: 28px; height: 28px; font-size: 0.8rem; }
+  .footer-links h4, .footer-services h4, .footer-contact h4 { font-size: 0.95rem; margin-bottom: 0.8rem; }
+  .footer-links ul li, .footer-services ul li { margin-bottom: 0.4rem; }
+  .footer-links ul li a, .footer-services ul li a { font-size: 0.8rem; }
+  .footer-contact p { font-size: 0.78rem; margin-bottom: 0.3rem; }
+  .footer-bottom { padding: 0.5rem 0; font-size: 0.75rem; }
+</style>
+<footer class="footer" id="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">Glamour <span class="logo-dot"></span></div>
+      <p>Where beauty meets artistry. We craft experiences that make you feel your most radiant self.</p>
+      <div class="footer-socials">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="services.html#booking">Book Appointment</a></li>
+      </ul>
+    </div>
+    <div class="footer-services">
+      <h4>Our Services</h4>
+      <ul>
+        <li><a href="services.html?service=makeup">Makeup Artistry</a></li>
+        <li><a href="services.html?service=hairstyle">Hair Styling</a></li>
+        <li><a href="services.html?service=spa">Luxury Spa</a></li>
+        <li><a href="services.html?service=nails">Nail Art</a></li>
+        <li><a href="services.html?service=grooming">Men's Grooming</a></li>
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h4>Contact Us</h4>
+      <p><i class="fas fa-map-marker-alt"></i> 42 Rose Lane, Connaught Place, New Delhi – 110001</p>
+      <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+      <p><i class="fas fa-envelope"></i> hello@glamoursalon.in</p>
+      <p><i class="fas fa-clock"></i> Mon–Sat: 9:00 AM – 8:00 PM</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Glamour Beauty Salon. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+var WA_NUMBER = "919777983985";
+
+/* Set min date = tomorrow */
+(function () {
+  var d = document.getElementById('appointmentDate');
+  if (!d) return;
+  var t = new Date(); t.setDate(t.getDate() + 1);
+  d.min = t.toISOString().split('T')[0];
+})();
+
+/* Pre-select service from URL ?service=xxx */
+(function () {
+  var map = {
+    makeup: 'Makeup Artistry', hairstyle: 'Hair Styling',
+    spa: 'Luxury Spa', nails: 'Nail Art',
+    grooming: "Men's Grooming", 'mens-facial': "Men's Facial",
+    'kids-haircut': 'Kids Haircut', 'kids-spa': 'Kids Mini Spa'
+  };
+  var key = new URLSearchParams(location.search).get('service');
+  if (!key) return;
+  var sel = document.getElementById('serviceSelect');
+  for (var i = 0; i < sel.options.length; i++) {
+    if (sel.options[i].value === (map[key] || key)) { sel.options[i].selected = true; break; }
+  }
+  setTimeout(function () {
+    var b = document.getElementById('booking');
+    if (b) b.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }, 400);
+})();
+
+/* Card click - scroll to form and pre-select service */
+function selectService(name) {
+  var sel = document.getElementById('serviceSelect');
+  for (var i = 0; i < sel.options.length; i++) {
+    if (sel.options[i].value === name) { sel.options[i].selected = true; break; }
+  }
+  document.getElementById('booking').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+/* Submit booking - save to localStorage, show modal, then open WhatsApp */
+function submitBooking(e) {
+  e.preventDefault();
+
+  var name       = document.getElementById('clientName').value.trim();
+  var phone      = document.getElementById('clientPhone').value.trim();
+  var email      = document.getElementById('clientEmail').value.trim();
+  var gender     = document.getElementById('clientGender').value || 'Not specified';
+  var service    = document.getElementById('serviceSelect').value;
+  var subService = document.getElementById('subService').value.trim();
+  var date       = document.getElementById('appointmentDate').value;
+  var time       = document.getElementById('appointmentTime').value;
+  var notes      = document.getElementById('specialRequest').value.trim();
+  var dateFormatted = new Date(date).toLocaleDateString('en-IN', {
+    weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
+  });
+  var id = 'GLM-' + Date.now().toString(36).toUpperCase().slice(-6);
+
+  /* Save to localStorage */
+  var all = JSON.parse(localStorage.getItem('glamour_appointments') || '[]');
+  all.push({ id: id, name: name, phone: phone, email: email, gender: gender,
+             service: service, subService: subService, date: date,
+             dateFormatted: dateFormatted, time: time, notes: notes,
+             bookedAt: new Date().toLocaleString('en-IN') });
+  localStorage.setItem('glamour_appointments', JSON.stringify(all));
+
+  /* Populate confirmation modal */
+  document.getElementById('bookingSummary').innerHTML =
+    '<div class="booking-summary-line"><strong>Booking ID:</strong> ' + id + '</div>' +
+    '<div class="booking-summary-line"><strong>Client:</strong> ' + name + '</div>' +
+    '<div class="booking-summary-line"><strong>Service:</strong> ' + service + (subService ? ' - ' + subService : '') + '</div>' +
+    '<div class="booking-summary-line"><strong>Date:</strong> ' + dateFormatted + '</div>' +
+    '<div class="booking-summary-line"><strong>Time:</strong> ' + time + '</div>' +
+    '<div class="booking-summary-line"><strong>Phone:</strong> ' + phone + '</div>' +
+    '<div class="booking-summary-line"><strong>Email:</strong> ' + email + '</div>' +
+    (notes ? '<div class="booking-summary-line"><strong>Notes:</strong> ' + notes + '</div>' : '');
+
+  /* Show confirmation modal */
+  document.getElementById('bookingModal').classList.add('active');
+
+  /* Send WhatsApp silently in background after short delay
+     (delay lets the modal render first, then WhatsApp opens in a new tab) */
+  setTimeout(function () {
+    var msg =
+      '*New Appointment - Glamour Salon*\n\n' +
+      '*Booking ID:* ' + id + '\n' +
+      '*Client:* ' + name + '\n' +
+      '*Gender:* ' + gender + '\n' +
+      '*Service:* ' + service + (subService ? ' - ' + subService : '') + '\n' +
+      '*Date:* ' + dateFormatted + '\n' +
+      '*Time:* ' + time + '\n' +
+      '*Phone:* ' + phone + '\n' +
+      '*Email:* ' + email + '\n' +
+      (notes ? '*Notes:* ' + notes + '\n' : '') +
+      '\n_Booked via Glamour Website_';
+    window.open('https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(msg), '_blank');
+  }, 600);
+}
+
+/* Close modal and reset form */
+function closeModal() {
+  document.getElementById('bookingModal').classList.remove('active');
+  document.getElementById('bookingForm').reset();
+  var d = document.getElementById('appointmentDate');
+  if (d) { var t = new Date(); t.setDate(t.getDate() + 1); d.min = t.toISOString().split('T')[0]; }
+}
+
+/* Close modal on backdrop click */
+document.addEventListener('click', function (e) {
+  var m = document.getElementById('bookingModal');
+  if (m && e.target === m) closeModal();
+});
+</script>
+</body>
+</html>
